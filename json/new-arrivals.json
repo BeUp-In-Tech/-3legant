@@ -5,7 +5,7 @@
     "price": 299.99,
     "badge": "NEW",
     "rating": 5,
-    "image": "/assets/products-img.png"
+    "image": "./assets/products-img.png"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "price": 349.99,
     "badge": "HOT",
     "rating": 4,
-    "image": "/assets/products-img.png"
+    "image": "./assets/products-img.png"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "price": 129.99,
     "badge": "NEW",
     "rating": 4,
-    "image": "/assets/products-img.png"
+    "image": "./assets/products-img.png"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "price": 249.99,
     "badge": "",
     "rating": 5,
-    "image": "/assets/products-img.png"
+    "image": "./assets/products-img.png"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "price": 499.99,
     "badge": "SALE",
     "rating": 5,
-    "image": "/assets/products-img.png"
+    "image": "./assets/products-img.png"
   }
 ]
 

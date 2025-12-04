@@ -76,8 +76,8 @@ const products = [
     title: "Skullcandy – Crusher anc 2 wireless headphones",
     price: 299.99,
     badge: "NEW",
-    wishlistIcon: "/assets/wishlist-icon.svg",
-    image: "/assets/best-product1.jpg",
+    wishlistIcon: "./assets/wishlist-icon.svg",
+    image: "./assets/best-product1.jpg",
     rating: 5
   },
   {
@@ -85,8 +85,8 @@ const products = [
     title: "Sony WH-1000XM5 Noise Cancelling Headphones",
     price: 349.99,
     badge: "HOT",
-    wishlistIcon: "/assets/wishlist-icon.svg",
-    image: "/assets/products-img2.png",
+    wishlistIcon: "./assets/wishlist-icon.svg",
+    image: "./assets/products-img2.png",
     rating: 4
   },
   {
@@ -94,8 +94,8 @@ const products = [
     title: "JBL Tune 720BT Wireless Over-Ear",
     price: 129.99,
     badge: "BEST",
-    wishlistIcon: "/assets/wishlist-icon.svg",
-    image: "/assets/products-img3.png",
+    wishlistIcon: "./assets/wishlist-icon.svg",
+    image: "./assets/products-img3.png",
     rating: 4
   },
   {
@@ -103,8 +103,8 @@ const products = [
     title: "JBL Tune 720BT Wireless Over-Ear",
     price: 129.99,
     badge: "BEST",
-    wishlistIcon: "/assets/wishlist-icon.svg",
-    image: "/assets/products-img4.png",
+    wishlistIcon: "./assets/wishlist-icon.svg",
+    image: "./assets/products-img4.png",
     rating: 4
   },
   {
@@ -112,8 +112,8 @@ const products = [
     title: "JBL Tune 720BT Wireless Over-Ear",
     price: 129.99,
     badge: "BEST",
-    wishlistIcon: "/assets/wishlist-icon.svg",
-    image: "/assets/products-img5.png",
+    wishlistIcon: "./assets/wishlist-icon.svg",
+    image: "./assets/products-img5.png",
     rating: 4
   },
 ];

@@ -549,7 +549,7 @@ width: 100%;
 
 .hero-section-wrapper {
   width: 100%;
-  background-image: url("/assets/hero-banner.png");
+  background-image: url("./assets/hero-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position: right center; */
@@ -1241,7 +1241,7 @@ width: 100%;
 
 .join-our-newsletter{
    width: 100%;
-  background-image: url("/assets/news-letter-banner.png");
+  background-image: url("./assets/news-letter-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
