@@ -182,7 +182,7 @@ async function loadNewArrivals() {
             <div class="product-badge-wishlist-wrapper">
               ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ""}
               <button class="wishlist-icon">
-                <img src="/assets/wishlist-icon.svg" />
+                <img src="./assets/wishlist-icon.svg" />
               </button>
             </div>
 
@@ -238,13 +238,11 @@ function sidebar_close() {
   document.querySelector('.mobile-menu-container').classList.add('closed');
 }
 
-// Open the side menu
 function sidebar_open() {
   document.querySelector('.mobile-menu-container').classList.remove('closed');
   document.querySelector('.mobile-menu-container').classList.add('open');
 }
 
-// Optional: attach to hamburger/open button
 document.querySelector('.open-menu-btn').addEventListener('click', sidebar_open);
 
 
