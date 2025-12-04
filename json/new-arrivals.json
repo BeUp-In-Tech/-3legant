@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "Skullcandy – Crusher ANC 2 Wireless Headphones",
+    "price": 299.99,
+    "badge": "NEW",
+    "rating": 5,
+    "image": "/assets/products-img.png"
+  },
+  {
+    "id": 2,
+    "title": "Sony WH-1000XM5 Noise Cancelling Headphones",
+    "price": 349.99,
+    "badge": "HOT",
+    "rating": 4,
+    "image": "/assets/products-img.png"
+  },
+  {
+    "id": 3,
+    "title": "JBL Tune 720BT Wireless Over-Ear",
+    "price": 129.99,
+    "badge": "NEW",
+    "rating": 4,
+    "image": "/assets/products-img.png"
+  },
+  {
+    "id": 4,
+    "title": "Beats Studio Wireless 3",
+    "price": 249.99,
+    "badge": "",
+    "rating": 5,
+    "image": "/assets/products-img.png"
+  },
+  {
+    "id": 5,
+    "title": "Apple AirPods Max",
+    "price": 499.99,
+    "badge": "SALE",
+    "rating": 5,
+    "image": "/assets/products-img.png"
+  }
+]
+
