@@ -1,3 +1,61 @@
+const newArrivalsData=[
+  {
+    "id": 1,
+    "title": "Skullcandy – Crusher ANC 2 Wireless Headphones",
+    "price": 299.99,
+    "badge": "NEW",
+    "rating": 5,
+    "image": "./assets/products-img.png",
+    "wishlistIcon": "./assets/wishlist-icon.svg"
+
+  },
+  {
+    "id": 2,
+    "title": "Sony WH-1000XM5 Noise Cancelling Headphones",
+    "price": 349.99,
+    "badge": "HOT",
+    "rating": 4,
+    "image": "./assets/products-img2.png",
+    "wishlistIcon": "./assets/wishlist-icon.svg"
+
+  },
+  {
+    "id": 3,
+    "title": "JBL Tune 720BT Wireless Over-Ear",
+    "price": 129.99,
+    "badge": "NEW",
+    "rating": 4,
+    "image": "./assets/products-img3.png",
+    "wishlistIcon": "./assets/wishlist-icon.svg"
+
+  },
+  {
+    "id": 4,
+    "title": "Beats Studio Wireless 3",
+    "price": 249.99,
+    "badge": "SALE",
+    "rating": 5,
+    "image": "./assets/products-img4.png",
+    "wishlistIcon": "./assets/wishlist-icon.svg"
+
+  },
+  {
+    "id": 5,
+    "title": "Apple AirPods Max",
+    "price": 499.99,
+    "badge": "SALE",
+    "rating": 5,
+    "image": "./assets/products-img5.png",
+    "wishlistIcon": "./assets/wishlist-icon.svg"
+
+  }
+]
+
+
+
+
+
+
 /*DROPDOWN MENU */
 document.querySelectorAll(".dropdown").forEach(drop => {
     drop.addEventListener("click", function () {
@@ -88,12 +146,8 @@ track.addEventListener("pointerup", e => {
 /* NEW ARRIVALS (LOAD JSON) */
 async function loadNewArrivals() {
     try {
-        const res = await fetch("./json/new-arrivals.json" );
-        const products = await res.json();
-
         track.innerHTML = "";
-
-        products.forEach(product => {
+        newArrivalsData.forEach(product => {
             track.innerHTML += `
                 <div class="single-product-card">
                     <div class="img-wrapper-section">
