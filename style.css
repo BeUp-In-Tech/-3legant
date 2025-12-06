@@ -71,6 +71,9 @@ body {
 .bg-black-btn{
   background-color: var(--neutral-07);
 }
+.bg-black-btn:hover{
+  background-color: #121212;
+}
 
 .border-radius-8{
   border-radius: 8px;
@@ -126,6 +129,11 @@ body {
   font-size: 34px;
 
   }
+}
+
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .logo-text {

@@ -66,7 +66,6 @@ dots.forEach((dot, index) => {
 /* SLIDER SWIPE / POINTER DRAG*/
 let startX = 0;
 
-// Disable select while swiping
 track.addEventListener("pointerdown", e => {
     startX = e.clientX;
     track.style.cursor = "grabbing";
@@ -89,7 +88,7 @@ track.addEventListener("pointerup", e => {
 /* NEW ARRIVALS (LOAD JSON) */
 async function loadNewArrivals() {
     try {
-        const res = await fetch("./json/new-arrivals.json");
+        const res = await fetch("./json/new-arrivals.json" );
         const products = await res.json();
 
         track.innerHTML = "";
