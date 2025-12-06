@@ -81,7 +81,7 @@ function generateStars(count) {
   return stars;
 }
 
-fetch('./json/best-selling.json')
+fetch('/json/best-selling.json')
   .then(response => response.json())
   .then(products => {
     loadProducts(products);
