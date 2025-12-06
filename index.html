@@ -1,776 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3legant E-Commerce</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div>
-      <!-- top bar  -->
-      <div class="topbar-bg">
-        <div class="promo-msg-wrapper">
-          <div>
-            <img src="./assets/ticket-percent.svg" alt="Union.svg" />
-          </div>
-          <div>
-            <p class="promo-title">30% off storewide — Limited time!</p>
-          </div>
-          <button class="shop-now-btn sm-hidden">
-            Shop Now <img src="./assets/arrow-right.svg" alt="" />
-          </button>
-        </div>
 
-        <div class="promo-close">
-          <button class="promo-close-btn">
-            <img
-              src="./assets/Union.svg"
-              alt="Union.svg"
-              class="promo-close-icon"
-            />
-            <img
-              src="./assets/close.svg"
-              alt="Union.svg"
-              class="promo-white-close-btn"
-            />
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3legant E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div>
+    <!-- top bar  -->
+    <div class="topbar-bg">
+      <div class="promo-msg-wrapper">
+        <div>
+          <img src="./assets/ticket-percent.svg" alt="Union.svg" />
         </div>
+        <div>
+          <p class="promo-title">30% off storewide — Limited time!</p>
+        </div>
+        <button class="shop-now-btn sm-hidden">
+          Shop Now <img src="./assets/arrow-right.svg" alt="" />
+        </button>
       </div>
-      <nav class="nav-content">
-        <!-- main navigation bar  -->
-        <div class="container">
-          <div class="nav-bar-content-wrapper">
-            <div class="logo-container">
-              <div class="logo-container-wrapper">
-                <button class="open-menu-btn">
-                  <div class="large-hidden">
-                    <img
-                      src="./assets/menu-line-horizontal.svg"
-                      alt=""
-                      class="hamburger"
-                    />
+
+      <div class="promo-close">
+        <button class="promo-close-btn">
+          <img src="./assets/Union.svg" alt="Union.svg" class="promo-close-icon" />
+          <img src="./assets/close.svg" alt="Union.svg" class="promo-white-close-btn" />
+        </button>
+      </div>
+    </div>
+    <nav class="nav-content">
+      <!-- main navigation bar  -->
+      <div class="container">
+        <div class="nav-bar-content-wrapper">
+          <div class="logo-container">
+            <div class="logo-container-wrapper">
+              <button class="open-menu-btn">
+                <div class="large-hidden">
+                  <img src="./assets/menu-line-horizontal.svg" alt="" class="hamburger" />
+                </div>
+              </button>
+
+              <div>
+                <a href="/" class="logo-wrapper Poppins">
+                  <h3 class="logo-text">3legant</h3>
+                </a>
+              </div>
+            </div>
+
+            <!-- Main Side Menu Container -->
+            <div class="large-hidden mobile-menu-container">
+              <div class="side-menu white-background" id="sideMenu">
+                <div>
+                  <div class="menu-header">
+                    <a href="/" class="logo-wrapper Poppins">
+                      <h3 class="logo-text">3legant.</h3>
+                    </a>
+                    <button onclick="sidebar_close()" class="close-btn" id="closeBtn">
+                      <img src="./assets/close-btn22.svg" alt="close-btn22.svg" />
+                    </button>
                   </div>
-                </button>
+
+                  <!-- Search Box -->
+                  <div class="search-box">
+                    <input type="text" placeholder="Search" />
+                  </div>
+
+                  <!-- Main Menu List -->
+                  <ul class="menu-list">
+                    <li class="nav-link-item">
+                      <a href="/" class="nav-item">Home</a>
+                    </li>
+                    <li class="nav-link-item dropdown">
+                      <span class="dropdown-toggle">Shop</span>
+                      <img src="./assets/down-arrow.svg" class="down-arrow" />
+                      <ul class="dropdown-menu">
+                        <li>Men</li>
+                        <li>Women</li>
+                        <li>Accessories</li>
+                      </ul>
+                    </li>
+                    <li class="nav-link-item dropdown">
+                      <span class="dropdown-toggle">Product</span>
+                      <img src="./assets/down-arrow.svg" class="down-arrow" />
+                      <ul class="dropdown-menu">
+                        <li>New Arrivals</li>
+                        <li>Trending</li>
+                        <li>Best Sellers</li>
+                      </ul>
+                    </li>
+                    <li class="nav-link-item">Contact Us</li>
+                  </ul>
+                </div>
 
                 <div>
-                  <a href="/" class="logo-wrapper Poppins">
-                    <h3 class="logo-text">3legant</h3>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Main Side Menu Container -->
-              <div class="large-hidden mobile-menu-container">
-                <div class="side-menu white-background" id="sideMenu">
-                  <div>
-                    <div class="menu-header">
-                      <a href="/" class="logo-wrapper Poppins">
-                        <h3 class="logo-text">3legant.</h3>
-                      </a>
-                      <button
-                        onclick="sidebar_close()"
-                        class="close-btn"
-                        id="closeBtn"
-                      >
-                        <img
-                          src="./assets/close-btn22.svg"
-                          alt="close-btn22.svg"
-                        />
-                      </button>
+                  <!-- Cart & Wishlist -->
+                  <div class="menu-cart-wishlist">
+                    <div class="cart-flex">
+                      <span>Cart</span>
+                      <div class="cart-icon-wrapper">
+                        <img src="./assets/cart-icon.svg" alt="cart-icon" />
+                        <span class="count">2</span>
+                      </div>
                     </div>
-
-                    <!-- Search Box -->
-                    <div class="search-box">
-                      <input type="text" placeholder="Search" />
+                    <div class="cart-flex">
+                      <span>Wishlist</span>
+                      <div class="cart-icon-wrapper">
+                        <img src="./assets/Line.svg" alt="cart-icon" />
+                        <span class="count">2</span>
+                      </div>
                     </div>
-
-                    <!-- Main Menu List -->
-                    <ul class="menu-list">
-                      <li class="nav-link-item">
-                        <a href="/" class="nav-item">Home</a>
-                      </li>
-                      <li class="nav-link-item dropdown">
-                        <span class="dropdown-toggle">Shop</span>
-                        <img src="./assets/down-arrow.svg" class="down-arrow" />
-                        <ul class="dropdown-menu">
-                          <li>Men</li>
-                          <li>Women</li>
-                          <li>Accessories</li>
-                        </ul>
-                      </li>
-                      <li class="nav-link-item dropdown">
-                        <span class="dropdown-toggle">Product</span>
-                        <img src="./assets/down-arrow.svg" class="down-arrow" />
-                        <ul class="dropdown-menu">
-                          <li>New Arrivals</li>
-                          <li>Trending</li>
-                          <li>Best Sellers</li>
-                        </ul>
-                      </li>
-                      <li class="nav-link-item">Contact Us</li>
-                    </ul>
                   </div>
 
-                  <div>
-                    <!-- Cart & Wishlist -->
-                    <div class="menu-cart-wishlist">
-                      <div class="cart-flex">
-                        <span>Cart</span>
-                        <div class="cart-icon-wrapper">
-                          <img src="./assets/cart-icon.svg" alt="cart-icon" />
-                          <span class="count">2</span>
-                        </div>
-                      </div>
-                      <div class="cart-flex">
-                        <span>Wishlist</span>
-                        <div class="cart-icon-wrapper">
-                          <img src="./assets/Line.svg" alt="cart-icon" />
-                          <span class="count">2</span>
-                        </div>
-                      </div>
-                    </div>
+                  <!-- Sign In Button -->
+                  <button class="sign-in-btn">Sign In</button>
 
-                    <!-- Sign In Button -->
-                    <button class="sign-in-btn">Sign In</button>
-
-                    <!-- Social Media Icons -->
-                    <div class="large-hidden flex-icon">
-                      <a href="#"
-                        ><img src="./assets/instagram2.svg" alt="Instagram"
-                      /></a>
-                      <a href="#"
-                        ><img src="./assets/facebook2.svg" alt="Facebook"
-                      /></a>
-                      <a href="#"
-                        ><img src="./assets/youtube3.svg" alt="YouTube"
-                      /></a>
-                    </div>
+                  <!-- Social Media Icons -->
+                  <div class="large-hidden flex-icon">
+                    <a href="#"><img src="./assets/instagram2.svg" alt="Instagram" /></a>
+                    <a href="#"><img src="./assets/facebook2.svg" alt="Facebook" /></a>
+                    <a href="#"><img src="./assets/youtube3.svg" alt="YouTube" /></a>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="nav-links-wrapper sm-hidden">
-              <ul class="nav-links-list">
-                <li class="nav-link-item">
-                  <a href="/" class="nav-item">Home</a>
-                </li>
-                <li class="nav-link-item dropdown">
-                  <span class="dropdown-toggle">Shop</span>
-                  <img src="./assets/down-arrow.svg" class="down-arrow" />
-                  <ul class="dropdown-menu">
-                    <li>Men</li>
-                    <li>Women</li>
-                    <li>Accessories</li>
-                  </ul>
-                </li>
-                <li class="nav-link-item dropdown">
-                  <span class="dropdown-toggle">Product</span>
-                  <img src="./assets/down-arrow.svg" class="down-arrow" />
-                  <ul class="dropdown-menu">
-                    <li>New Arrivals</li>
-                    <li>Trending</li>
-                    <li>Best Sellers</li>
-                  </ul>
-                </li>
-                <li class="nav-link-item">Contact Us</li>
-              </ul>
-            </div>
-
-            <div class="nav-icons-wrapper sm-hidden">
-              <a href="#" class="search-icon-wrapper">
-                <img src="./assets/search-icon.svg" alt="search-icon" />
-              </a>
-              <a href="#" class="user-icon-wrapper">
-                <img src="./assets/user-circle.svg" alt="user-icon" />
-              </a>
-              <a href="#" class="cart-icon-wrapper">
-                <img src="./assets/cart-icon.svg" alt="cart-icon" />
-              </a>
             </div>
           </div>
+
+          <div class="nav-links-wrapper sm-hidden">
+            <ul class="nav-links-list">
+              <li class="nav-link-item">
+                <a href="/" class="nav-item">Home</a>
+              </li>
+              <li class="nav-link-item dropdown">
+                <span class="dropdown-toggle">Shop</span>
+                <img src="./assets/down-arrow.svg" class="down-arrow" />
+                <ul class="dropdown-menu">
+                  <li>Men</li>
+                  <li>Women</li>
+                  <li>Accessories</li>
+                </ul>
+              </li>
+              <li class="nav-link-item dropdown">
+                <span class="dropdown-toggle">Product</span>
+                <img src="./assets/down-arrow.svg" class="down-arrow" />
+                <ul class="dropdown-menu">
+                  <li>New Arrivals</li>
+                  <li>Trending</li>
+                  <li>Best Sellers</li>
+                </ul>
+              </li>
+              <li class="nav-link-item">Contact Us</li>
+            </ul>
+          </div>
+
+          <div class="nav-icons-wrapper sm-hidden">
+            <a href="#" class="search-icon-wrapper">
+              <img src="./assets/search-icon.svg" alt="search-icon" />
+            </a>
+            <a href="#" class="user-icon-wrapper">
+              <img src="./assets/user-circle.svg" alt="user-icon" />
+            </a>
+            <a href="#" class="cart-icon-wrapper">
+              <img src="./assets/cart-icon.svg" alt="cart-icon" />
+            </a>
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
+  </div>
+  <!-- hero section  -->
+  <section>
     <!-- hero section  -->
-    <section>
-      <!-- hero section  -->
-      <div class="hero-section-wrapper">
-        <div class="container">
-          <div class="hero-content-wrapper">
-            <div>
-              <h1 class="hero-title Poppins">
-                Listen to <br class="br-text sm-hidden" />
-                the <span class="blue-text">amazing</span>
-                <br class="br-text" />
-                music sound.
-              </h1>
-              <p class="hero-subtitle">Experience music like never before</p>
-              <button class="explore-now-btn">Explore Now</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- logo section  -->
-    <section>
-      <!--  logo section  -->
-      <div class="logo-section-wrapper">
-        <div class="container">
-          <div class="logo-content-wrapper">
-            <div class="logo-item">
-              <img src="./assets/logo-1.svg" alt="logo-1" />
-            </div>
-            <div class="logo-item">
-              <img src="./assets/logo-2.svg" alt="logo-2" />
-            </div>
-            <div class="logo-item">
-              <img src="./assets/logo-3.svg" alt="logo-3" />
-            </div>
-            <div class="logo-item">
-              <img src="./assets/logo-4.svg" alt="logo-4" />
-            </div>
-            <div class="logo-item">
-              <img src="./assets/logo-5.svg" alt="logo-5" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- new arrivals  -->
-    <section>
-      <!-- new arrivals section -->
-      <div class="new-arrivals-section-wrapper section-padding">
-        <div class="container">
-          <div class="section-content-wrapper mb-48">
-            <h2 class="section-title Poppins">New Arrivals</h2>
-            <div>
-              <!-- slider dotted navigation -->
-              <div class="slider-dots-wrapper">
-                <span class="slider-dot active">
-                  <svg
-                    height="24"
-                    width="24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      fill="none"
-                      stroke="black"
-                      stroke-width="2"
-                    ></circle>
-                    <circle cx="12" cy="12" r="7" fill="black"></circle>
-                  </svg>
-                </span>
-                <span class="slider-dot">
-                  <svg
-                    height="18"
-                    width="18"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle r="8" cx="8" cy="8" fill="#6C7275" />
-                  </svg>
-                </span>
-                <span class="slider-dot">
-                  <svg
-                    height="18"
-                    width="18"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle r="8" cx="8" cy="8" fill="#6C7275" />
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="product-slider-container">
-            <div class="product-slider">
-              <div class="product-track">
-                <div class="single-product-card">
-                  <div class="img-wrapper-section">
-                    <div class="product-badge-wishlist-wrapper">
-                      <span class="product-badge">NEW</span>
-                      <button class="wishlist-icon">
-                        <img
-                          src="./assets/wishlist-icon.svg"
-                          alt="wishlist-icon.svg"
-                        />
-                      </button>
-                    </div>
-                    <div class="product-image-wrapper">
-                      <img
-                        src="./assets/products-img.png"
-                        alt="product"
-                        class="product-img"
-                      />
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
-                  </div>
-                  <div class="rating">
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-
-                  <h3 class="product-title">
-                    Skullcandy – Crusher anc 2 wireless headphones
-                  </h3>
-                  <p class="price">$299.99</p>
-                </div>
-                <div class="single-product-card">
-                  <div class="img-wrapper-section">
-                    <div class="product-badge-wishlist-wrapper">
-                      <span class="product-badge">NEW</span>
-                      <button class="wishlist-icon">
-                        <img
-                          src="./assets/wishlist-icon.svg"
-                          alt="wishlist-icon.svg"
-                        />
-                      </button>
-                    </div>
-                    <div class="product-image-wrapper">
-                      <img
-                        src="./assets/products-img2.png"
-                        alt="product"
-                        class="product-img"
-                      />
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
-                  </div>
-                  <div class="rating">
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 class="product-title">
-                    Skullcandy – Crusher anc 2 wireless headphones
-                  </h3>
-                  <p class="price">$299.99</p>
-                </div>
-                <div class="single-product-card">
-                  <div class="img-wrapper-section">
-                    <div class="product-badge-wishlist-wrapper">
-                      <span class="product-badge">NEW</span>
-                      <button class="wishlist-icon">
-                        <img
-                          src="./assets/wishlist-icon.svg"
-                          alt="wishlist-icon.svg"
-                        />
-                      </button>
-                    </div>
-                    <div class="product-image-wrapper">
-                      <img
-                        src="./assets/products-img3.png"
-                        alt="product"
-                        class="product-img"
-                      />
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
-                  </div>
-                  <div class="rating">
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 class="product-title">
-                    Skullcandy – Crusher anc 2 wireless headphones
-                  </h3>
-                  <p class="price">$299.99</p>
-                </div>
-                <div class="single-product-card">
-                  <div class="img-wrapper-section">
-                    <div class="product-badge-wishlist-wrapper">
-                      <span class="product-badge">NEW</span>
-                      <button class="wishlist-icon">
-                        <img
-                          src="./assets/wishlist-icon.svg"
-                          alt="wishlist-icon.svg"
-                        />
-                      </button>
-                    </div>
-                    <div class="product-image-wrapper">
-                      <img
-                        src="./assets/products-img4.png"
-                        alt="product"
-                        class="product-img"
-                      />
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
-                  </div>
-                  <div class="rating">
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 class="product-title">
-                    Skullcandy – Crusher anc 2 wireless headphones
-                  </h3>
-                  <p class="price">$299.99</p>
-                </div>
-                <div class="single-product-card">
-                  <div class="img-wrapper-section">
-                    <div class="product-badge-wishlist-wrapper">
-                      <span class="product-badge">NEW</span>
-                      <button class="wishlist-icon">
-                        <img
-                          src="./assets/wishlist-icon.svg"
-                          alt="wishlist-icon.svg"
-                        />
-                      </button>
-                    </div>
-                    <div class="product-image-wrapper">
-                      <img
-                        src="./assets/products-img5.png"
-                        alt="product"
-                        class="product-img"
-                      />
-                    </div>
-                    <button class="add-to-cart">Add to cart</button>
-                  </div>
-                  <div class="rating">
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 14 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M6.40919 0.307964C6.57999 -0.102683 7.16171 -0.102684 7.33251 0.307962L8.86959 4.00356C8.9416 4.17667 9.1044 4.29496 9.2913 4.30994L13.281 4.62979C13.7243 4.66534 13.9041 5.21859 13.5663 5.50792L10.5266 8.11178C10.3842 8.23376 10.322 8.42515 10.3655 8.60752L11.2942 12.5008C11.3974 12.9334 10.9268 13.2753 10.5472 13.0435L7.13148 10.9572C6.97147 10.8595 6.77023 10.8595 6.61022 10.9572L3.19448 13.0435C2.81493 13.2753 2.3443 12.9334 2.4475 12.5008L3.37619 8.60752C3.41969 8.42515 3.3575 8.23376 3.21511 8.11178L0.175376 5.50793C-0.162392 5.21859 0.0173699 4.66534 0.460697 4.6298L4.4504 4.30994C4.6373 4.29496 4.8001 4.17667 4.87211 4.00356L6.40919 0.307964Z"
-                          fill="#343839"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 class="product-title">
-                    Skullcandy – Crusher anc 2 wireless headphones
-                  </h3>
-                  <p class="price">$299.99</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- shop collection  -->
-    <section class="shop-section section-padding">
+    <div class="hero-section-wrapper">
       <div class="container">
-        <div class="section-content-wrapper mb-48">
-          <h2 class="section-title Poppins">Shop Collection</h2>
+        <div class="hero-content-wrapper">
+          <div>
+            <h1 class="hero-title Poppins">
+              Listen to <br class="br-text sm-hidden" />
+              the <span class="blue-text">amazing</span>
+              <br class="br-text" />
+              music sound.
+            </h1>
+            <p class="hero-subtitle">Experience music like never before</p>
+            <button class="explore-now-btn">Explore Now</button>
+          </div>
         </div>
-        <div class="shop-grid">
-          <!-- Left Big Card -->
-          <div class="collection-card large">
-            <img src="./assets/collection-img1.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <!-- logo section  -->
+  <section>
+    <!--  logo section  -->
+    <div class="logo-section-wrapper">
+      <div class="container">
+        <div class="logo-content-wrapper">
+          <div class="logo-item">
+            <img src="./assets/logo-1.svg" alt="logo-1" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/logo-2.svg" alt="logo-2" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/logo-3.svg" alt="logo-3" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/logo-4.svg" alt="logo-4" />
+          </div>
+          <div class="logo-item">
+            <img src="./assets/logo-5.svg" alt="logo-5" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- new arrivals  -->
+  <section>
+    <!-- new arrivals section -->
+    <div class="new-arrivals-section-wrapper section-padding">
+      <div class="container">
+        <div class="section-content-wrapper mb-48 fade-up">
+          <h2 class="section-title Poppins">New Arrivals</h2>
+          <div>
+            <!-- slider dotted navigation -->
+            <div class="slider-dots-wrapper">
+              <span class="slider-dot active">
+                <svg height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10" fill="none" stroke="black" stroke-width="2"></circle>
+                  <circle cx="12" cy="12" r="7" fill="black"></circle>
+                </svg>
+              </span>
+              <span class="slider-dot">
+                <svg height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="8" cx="8" cy="8" fill="#6C7275" />
+                </svg>
+              </span>
+              <span class="slider-dot">
+                <svg height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="8" cx="8" cy="8" fill="#6C7275" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="product-slider-container">
+          <div class="product-slider">
+            <div class="product-track" id="newArrivalContainer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- shop collection  -->
+  <section class="shop-section section-padding">
+    <div class="container">
+      <div class="section-content-wrapper mb-48 fade-up">
+        <h2 class="section-title Poppins">Shop Collection</h2>
+      </div>
+      <div class="shop-grid">
+        <!-- Left Big Card -->
+        <div class="collection-card large">
+          <img src="./assets/collection-img1.png" alt="" />
+          <div class="info-box">
+            <h3 class="collection-heading">Headband</h3>
+            <button class="collection-btn">
+              Collection
+              <img src="./assets/arrow-right-black.svg" alt="arrow-right-black.svg" class="collection-right-arrow" />
+            </button>
+          </div>
+        </div>
+
+        <!-- Right side two cards -->
+        <div class="right-grid">
+          <div class="collection-card">
+            <img src="./assets/collection-img3.png" alt="" />
             <div class="info-box">
-              <h3 class="collection-heading">Headband</h3>
+              <h3 class="collection-heading">Earbuds</h3>
               <button class="collection-btn">
-                Collection
-                <img
-                  src="./assets/arrow-right-black.svg"
-                  alt="arrow-right-black.svg"
-                  class="collection-right-arrow"
-                />
+                Collection <img src="./assets/arrow-right-black.svg" alt="" />
               </button>
             </div>
           </div>
 
-          <!-- Right side two cards -->
-          <div class="right-grid">
-            <div class="collection-card">
-              <img src="./assets/collection-img3.png" alt="" />
-              <div class="info-box">
-                <h3 class="collection-heading">Earbuds</h3>
-                <button class="collection-btn">
-                  Collection <img src="./assets/arrow-right-black.svg" alt="" />
-                </button>
-              </div>
-            </div>
-
-            <div class="collection-card">
-              <img src="./assets/collection-img2.png" alt="" />
-              <div class="info-box">
-                <h3 class="collection-heading">Accessories</h3>
-                <button class="collection-btn">
-                  Collection <img src="./assets/arrow-right-black.svg" alt="" />
-                </button>
-              </div>
+          <div class="collection-card">
+            <img src="./assets/collection-img2.png" alt="" />
+            <div class="info-box">
+              <h3 class="collection-heading">Accessories</h3>
+              <button class="collection-btn">
+                Collection <img src="./assets/arrow-right-black.svg" alt="" />
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- best selleing  -->
-    <section class="section-padding">
-      <!-- best Sellers -->
-      <div class="container">
-        <div class="section-content-wrapper mb-48">
-          <h2 class="section-title Poppins">Best Seller</h2>
-        </div>
-        <!-- <div class="product-grid-section">
+  <!-- best selleing  -->
+  <section class="section-padding">
+    <!-- best Sellers -->
+    <div class="container">
+      <div class="section-content-wrapper mb-48 fade-up">
+        <h2 class="section-title Poppins">Best Seller</h2>
+      </div>
+      <!-- <div class="product-grid-section">
           <div class="single-best-card">
             <div class="img-wrapper-section">
               <div class="product-badge-wishlist-wrapper">
@@ -855,220 +392,188 @@
             <p class="price">$299.99</p>
           </div>
         </div> -->
-        <div class="product-grid-section" id="bestSellerContainer"></div>
+      <div class="product-grid-section" id="bestSellerContainer"></div>
+    </div>
+  </section>
+
+  <!-- PROMOTION  -->
+  <section class="section-padding pb-0">
+    <div class="promotion-wrapper-section">
+      <div class="promotion-left">
+        <img src="./assets/promotion-banner.png" alt="promotion1" class="promotion-img" />
       </div>
-    </section>
+      <div class="promotion-content bg-yellow-40">
+        <h4>PROMOTION</h4>
+        <h3>Hurry up! 40% OFF</h3>
+        <p>Thousands of high tech are waiting for you</p>
+        <div class="counter-content">
+          <p>Offer expires in:</p>
+          <div class="counter-timing-wrapper mb-24">
+            <div class="counter-card">
+              <div id="days" class="counter-block">12</div>
 
-    <!-- PROMOTION  -->
-    <section class="section-padding pb-0">
-      <div class="promotion-wrapper-section">
-        <div class="promotion-left">
-          <img
-            src="./assets/promotion-banner.png"
-            alt="promotion1"
-            class="promotion-img"
-          />
-        </div>
-        <div class="promotion-content bg-yellow-40">
-          <h4>PROMOTION</h4>
-          <h3>Hurry up! 40% OFF</h3>
-          <p>Thousands of high tech are waiting for you</p>
-          <div class="counter-content">
-            <p>Offer expires in:</p>
-            <div class="counter-timing-wrapper mb-24">
-              <div class="counter-card">
-                <div id="days" class="counter-block">12</div>
-
-                <span>Days</span>
-              </div>
-              <div class="counter-card">
-                <div id="days" class="counter-block">02</div>
-
-                <span>Hours</span>
-              </div>
-              <div class="counter-card">
-                <div id="days" class="counter-block">45</div>
-
-                <span>Minutes</span>
-              </div>
-              <div class="counter-card">
-                <div id="days" class="counter-block">05</div>
-
-                <span>Seconds</span>
-              </div>
+              <span>Days</span>
             </div>
-            <button
-              class="bg-black-btn border-radius-8 px-40 py-8 border-none text-white font-medium height-40px font-16px"
-            >
-              Shop Now
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="counter-card">
+              <div id="days" class="counter-block">02</div>
 
-    <!-- newfeed  -->
-    <section class="section-padding pb-0">
-      <div class="container">
-        <div class="newsfeed-content-wrapper">
-          <h3 class="newsfeed-sm-title">newsfeed</h3>
-          <h2 class="instragram-title">Instagram</h2>
-          <p>Follow us on social media for more discount & promotions</p>
-          <p class="legent-official">@3legant_official</p>
-        </div>
-        <div class="newsfeed-img-wrapper">
-          <div class="newsfeed-single-img-wrapper">
-            <img
-              src="./assets/newsfeed-img1.png"
-              alt="newletter-img1.png"
-              class="newsfeed-img"
-            />
-          </div>
-          <div class="newsfeed-single-img-wrapper">
-            <img
-              src="./assets/newsfeed-img2.png"
-              alt="newletter-img1.png"
-              class="newsfeed-img"
-            />
-          </div>
-          <div class="newsfeed-single-img-wrapper">
-            <img
-              src="./assets/newsfeed-img3.png"
-              alt="newletter-img1.png"
-              class="newsfeed-img"
-            />
-          </div>
-          <div class="newsfeed-single-img-wrapper">
-            <img
-              src="./assets/newsfeed-img4.png"
-              alt="newletter-img1.png"
-              class="newsfeed-img"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- newsletter  -->
-    <section class="section-padding pb-0">
-      <div class="join-our-newsletter">
-        <div class="container">
-          <h3 class="newsletter-title">Join Our Newsletter</h3>
-          <h4 class="newsletter-subtitle">
-            Sign up for deals, new products and promotions
-          </h4>
-          <div class="email-container">
-            <form action="">
-              <div class="email-signup-form">
-                <img
-                  src="./assets/email.svg"
-                  alt="email-icon"
-                  class="email-icon"
-                />
-                <div class="input-wrapper">
-                  <input type="email" required class="email-input" />
-                  <label class="floating-label">Email address</label>
-                </div>
-                <button type="submit" class="email-signup-btn">Sign Up</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+              <span>Hours</span>
+            </div>
+            <div class="counter-card">
+              <div id="days" class="counter-block">45</div>
 
-    <!-- free shipping section  -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="supportpart-wrapper">
-          <div class="py-48px px-32px bg-white-f7 suporter-content-box">
-            <img
-              src="./assets/fast delivery.svg"
-              alt="fast delivery.svg"
-              class="support-icon"
-            />
-            <h4>Free Shipping</h4>
-            <span>Order above $200</span>
-          </div>
-          <div class="py-48px px-32px bg-white-f7 suporter-content-box">
-            <img
-              src="./assets/money.svg"
-              alt="money.svg"
-              class="support-icon"
-            />
-            <h4>Money-back</h4>
-            <span>30 days guarantee</span>
-          </div>
-          <div class="py-48px px-32px bg-white-f7 suporter-content-box">
-            <img src="./assets/lock.svg" alt="money.svg" class="support-icon" />
-            <h4>Secure Payments</h4>
-            <span>Secured by Stripe</span>
-          </div>
-          <div class="py-48px px-32px bg-white-f7 suporter-content-box">
-            <img src="./assets/call.svg" alt="money.svg" class="support-icon" />
-            <h4>24/7 Support</h4>
-            <span>Phone and Email support</span>
-          </div>
-        </div>
-      </div>
-    </section>
+              <span>Minutes</span>
+            </div>
+            <div class="counter-card">
+              <div id="days" class="counter-block">05</div>
 
-    <footer class="footer-content">
-      <div class="container">
-        <div class="footer-content-wrapper">
-          <div class="footer-left">
-            <a href="/" class="logo-wrapper Poppins">
-              <h3 class="logo-text text-white">3legant.</h3>
-            </a>
-            <img src="./assets/footer-line.svg" alt="footer-line.svg" />
-            <span>Headphone Store</span>
-          </div>
-
-          <div>
-            <div class="footer-links-wrapper">
-              <ul class="footer-links-list">
-                <li class="footer-links-item">
-                  <a href="/" class="footer-item">Home</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="/" class="footer-item">Shop</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="/" class="footer-item">Product</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="/" class="footer-item">Blog</a>
-                </li>
-                <li class="footer-links-item">
-                  <a href="/" class="footer-item">Contact Us</a>
-                </li>
-              </ul>
+              <span>Seconds</span>
             </div>
           </div>
+          <button
+            class="bg-black-btn border-radius-8 px-40 py-8 border-none text-white font-medium height-40px font-16px">
+            Shop Now
+          </button>
         </div>
-        <div class="copyright-section">
-          <div class="copyright-wrapper">
-            <p>Copyright © 2023 3legant. All rights reserved</p>
+      </div>
+    </div>
+  </section>
 
-            <a href="#" class="footer-link">Privacy Policy</a>
-            <a href="#" class="footer-link">Terms of Use</a>
-          </div>
-          <div class="social-icon">
-            <a href="#" class="social-icon-wrapper">
-              <img src="./assets/instagram.svg" alt="instagram.svg" />
-            </a>
-            <a href="#" class="social-icon-wrapper">
-              <img src="./assets/facebook.svg" alt="instagram.svg" />
-            </a>
-            <a href="#" class="social-icon-wrapper">
-              <img src="./assets/youtube.svg" alt="instagram.svg" />
-            </a>
+  <!-- newfeed  -->
+  <section class="section-padding pb-0">
+    <div class="container">
+      <div class="newsfeed-content-wrapper">
+        <h3 class="newsfeed-sm-title fade-up">newsfeed</h3>
+        <h2 class="instragram-title fade-up">Instagram</h2>
+        <p class="fade-up">Follow us on social media for more discount & promotions</p>
+        <p class="legent-official fade-up">@3legant_official</p>
+      </div>
+      <div class="newsfeed-img-wrapper fade-up">
+        <div class="newsfeed-single-img-wrapper">
+          <img src="./assets/newsfeed-img1.png" alt="newletter-img1.png" class="newsfeed-img" />
+        </div>
+        <div class="newsfeed-single-img-wrapper">
+          <img src="./assets/newsfeed-img2.png" alt="newletter-img1.png" class="newsfeed-img" />
+        </div>
+        <div class="newsfeed-single-img-wrapper">
+          <img src="./assets/newsfeed-img3.png" alt="newletter-img1.png" class="newsfeed-img" />
+        </div>
+        <div class="newsfeed-single-img-wrapper">
+          <img src="./assets/newsfeed-img4.png" alt="newletter-img1.png" class="newsfeed-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- newsletter  -->
+  <section class="section-padding pb-0">
+    <div class="join-our-newsletter">
+      <div class="container">
+        <h3 class="newsletter-title fade-up">Join Our Newsletter</h3>
+        <h4 class="newsletter-subtitle fade-up">
+          Sign up for deals, new products and promotions
+        </h4>
+        <div class="email-container fade-up">
+          <form action="">
+            <div class="email-signup-form">
+              <img src="./assets/email.svg" alt="email-icon" class="email-icon" />
+              <div class="input-wrapper">
+                <input type="email" required class="email-input" />
+                <label class="floating-label">Email address</label>
+              </div>
+              <button type="submit" class="email-signup-btn">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- free shipping section  -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="supportpart-wrapper">
+        <div class="py-48px px-32px bg-white-f7 suporter-content-box">
+          <img src="./assets/fast delivery.svg" alt="fast delivery.svg" class="support-icon" />
+          <h4>Free Shipping</h4>
+          <span>Order above $200</span>
+        </div>
+        <div class="py-48px px-32px bg-white-f7 suporter-content-box">
+          <img src="./assets/money.svg" alt="money.svg" class="support-icon" />
+          <h4>Money-back</h4>
+          <span>30 days guarantee</span>
+        </div>
+        <div class="py-48px px-32px bg-white-f7 suporter-content-box">
+          <img src="./assets/lock.svg" alt="money.svg" class="support-icon" />
+          <h4>Secure Payments</h4>
+          <span>Secured by Stripe</span>
+        </div>
+        <div class="py-48px px-32px bg-white-f7 suporter-content-box">
+          <img src="./assets/call.svg" alt="money.svg" class="support-icon" />
+          <h4>24/7 Support</h4>
+          <span>Phone and Email support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-content">
+    <div class="container">
+      <div class="footer-content-wrapper fade-up">
+        <div class="footer-left">
+          <a href="/" class="logo-wrapper Poppins">
+            <h3 class="logo-text text-white">3legant.</h3>
+          </a>
+          <img src="./assets/footer-line.svg" alt="footer-line.svg" />
+          <span>Headphone Store</span>
+        </div>
+
+        <div>
+          <div class="footer-links-wrapper">
+            <ul class="footer-links-list">
+              <li class="footer-links-item">
+                <a href="/" class="footer-item">Home</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="/" class="footer-item">Shop</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="/" class="footer-item">Product</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="/" class="footer-item">Blog</a>
+              </li>
+              <li class="footer-links-item">
+                <a href="/" class="footer-item">Contact Us</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
+      <div class="copyright-section fade-up">
+        <div class="copyright-wrapper">
+          <p>Copyright © 2023 3legant. All rights reserved</p>
 
-    <script src="/script.js"></script>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Use</a>
+        </div>
+        <div class="social-icon">
+          <a href="#" class="social-icon-wrapper">
+            <img src="./assets/instagram.svg" alt="instagram.svg" />
+          </a>
+          <a href="#" class="social-icon-wrapper">
+            <img src="./assets/facebook.svg" alt="instagram.svg" />
+          </a>
+          <a href="#" class="social-icon-wrapper">
+            <img src="./assets/youtube.svg" alt="instagram.svg" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  </body>
+  <script src="/script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+
 </html>
