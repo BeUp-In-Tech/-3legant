@@ -52,7 +52,53 @@ const newArrivalsData=[
 ]
 
 
-
+const bestSellingData=[
+  {
+    "id": 1,
+    "title": "Skullcandy – Crusher anc 2 wireless headphones",
+    "price": 299.99,
+    "badge": "NEW",
+    "wishlistIcon": "./assets/wishlist-icon.svg",
+    "image": "./assets/best-product1.jpg",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "title": "Sony WH-1000XM5 Noise Cancelling Headphones",
+    "price": 349.99,
+    "badge": "HOT",
+    "wishlistIcon": "./assets/wishlist-icon.svg",
+    "image": "./assets/products-img2.png",
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "title": "JBL Tune 720BT Wireless Over-Ear",
+    "price": 129.99,
+    "badge": "BEST",
+    "wishlistIcon": "./assets/wishlist-icon.svg",
+    "image": "./assets/products-img3.png",
+    "rating": 4
+  },
+  {
+    "id": 4,
+    "title": "JBL Tune 720BT Wireless Over-Ear",
+    "price": 129.99,
+    "badge": "BEST",
+    "wishlistIcon": "./assets/wishlist-icon.svg",
+    "image": "./assets/products-img4.png",
+    "rating": 4
+  },
+  {
+    "id": 5,
+    "title": "JBL Tune 720BT Wireless Over-Ear",
+    "price": 129.99,
+    "badge": "BEST",
+    "wishlistIcon": "./assets/wishlist-icon.svg",
+    "image": "./assets/products-img5.png",
+    "rating": 4
+  }
+]
 
 
 
@@ -78,7 +124,6 @@ let track = document.querySelector(".product-track");
 let dots = document.querySelectorAll(".slider-dot");
 let cards = [];
 let currentIndex = 0;
-
 
 
 // Card width + gap
@@ -142,43 +187,36 @@ track.addEventListener("pointerup", e => {
     document.body.style.userSelect = "auto";
 });
 
-
 /* NEW ARRIVALS (LOAD JSON) */
-async function loadNewArrivals() {
-    try {
-        track.innerHTML = "";
-        newArrivalsData.forEach(product => {
-            track.innerHTML += `
-                <div class="single-product-card">
-                    <div class="img-wrapper-section">
+function loadNewArrivals() {
+    track.innerHTML = "";
 
-                        <div class="product-badge-wishlist-wrapper">
-                            ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ""}
-                            <button class="wishlist-icon"><img src="${product.wishlistIcon}" /></button>
-                        </div>
-
-                        <div class="product-image-wrapper">
-                            <img src="${product.image}" class="product-img" />
-                        </div>
-
-                        <button class="add-to-cart">Add to cart</button>
+    newArrivalsData.forEach(product => {
+        track.innerHTML += `
+            <div class="single-product-card">
+                <div class="img-wrapper-section">
+                    <div class="product-badge-wishlist-wrapper">
+                        ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ""}
+                        <button class="wishlist-icon"><img src="${product.wishlistIcon}"></button>
                     </div>
 
-                    <div class="rating">${generateStars(product.rating)}</div>
-                    <h3 class="product-title">${product.title}</h3>
-                    <p class="price">$${product.price}</p>
+                    <div class="product-image-wrapper">
+                        <img src="${product.image}" class="product-img">
+                    </div>
+
+                    <button class="add-to-cart">Add to cart</button>
                 </div>
-            `;
-        });
 
-        // Re-select after JSON load
-        cards = document.querySelectorAll(".single-product-card");
-        currentIndex = 0;
-        updateSlider();
+                <div class="rating">${generateStars(product.rating)}</div>
+                <h3 class="product-title">${product.title}</h3>
+                <p class="price">$${product.price}</p>
+            </div>
+        `;
+    });
 
-    } catch (err) {
-        console.log("Error loading New Arrivals JSON:", err);
-    }
+    cards = document.querySelectorAll(".single-product-card");
+    currentIndex = 0;
+    updateSlider();
 }
 loadNewArrivals();
 
@@ -196,38 +234,32 @@ function generateStars(count) {
     }
     return stars;
 }
-// Load best seller product
-function loadProducts(products) {
-    products.forEach(product => {
-        container.innerHTML += `
-            <div class="single-best-card">
-                <div class="img-wrapper-section">
-                    <div class="product-badge-wishlist-wrapper">
-                        <span class="product-badge">${product.badge}</span>
-                        <button class="wishlist-icon">
-                            <img src="${product.wishlistIcon}" alt="wishlist">
-                        </button>
-                    </div>
 
-                    <div class="product-image-wrapper">
-                        <img src="${product.image}" alt="${product.title}" class="product-img" />
-                    </div>
 
-                    <button class="add-to-cart">Add to cart</button>
+bestSellingData.forEach(product => {
+    container.innerHTML += `
+        <div class="single-best-card">
+            <div class="img-wrapper-section">
+                <div class="product-badge-wishlist-wrapper">
+                    <span class="product-badge">${product.badge}</span>
+                    <button class="wishlist-icon">
+                        <img src="${product.wishlistIcon}">
+                    </button>
                 </div>
 
-                <div class="rating">${generateStars(product.rating)}</div>
-                <h3 class="product-title">${product.title}</h3>
-                <p class="price">$${product.price}</p>
-            </div>
-        `;
-    });
-}
+                <div class="product-image-wrapper">
+                    <img src="${product.image}" class="product-img">
+                </div>
 
-fetch('./json/best-selling.json')
-    .then(res => res.json())
-    .then(loadProducts)
-    .catch(err => console.error("Error loading Best Sellers JSON:", err));
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="rating">${generateStars(product.rating)}</div>
+            <h3 class="product-title">${product.title}</h3>
+            <p class="price">$${product.price}</p>
+        </div>
+    `;
+});
 
 
 
