@@ -15,8 +15,6 @@ document.querySelectorAll(".dropdown").forEach(drop => {
     });
 });
 
-
-
 /* SLIDER VARIABLES */
 let track = document.querySelector(".product-track");
 let dots = document.querySelectorAll(".slider-dot");
@@ -91,7 +89,7 @@ track.addEventListener("pointerup", e => {
 /* NEW ARRIVALS (LOAD JSON) */
 async function loadNewArrivals() {
     try {
-        const res = await fetch("/json/new-arrivals.json");
+        const res = await fetch("./json/new-arrivals.json");
         const products = await res.json();
 
         track.innerHTML = "";
@@ -173,7 +171,7 @@ function loadProducts(products) {
     });
 }
 
-fetch('/json/best-selling.json')
+fetch('./json/best-selling.json')
     .then(res => res.json())
     .then(loadProducts)
     .catch(err => console.error("Error loading Best Sellers JSON:", err));
